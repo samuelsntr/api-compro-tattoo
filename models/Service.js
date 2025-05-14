@@ -1,25 +1,31 @@
 module.exports = (sequelize, DataTypes) => {
-    return sequelize.define('Service', {
+  return sequelize.define(
+    "Service",
+    {
       name: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
       },
       description: {
         type: DataTypes.TEXT,
-        allowNull: false
+        allowNull: false,
       },
       imageUrl: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
       },
       price: {
         type: DataTypes.FLOAT,
-        allowNull: false
+        allowNull: false,
       },
       duration: {
         type: DataTypes.STRING,
-        allowNull: true
-      }
-    });
-  };
-  
+        allowNull: true,
+      },
+    },
+    {
+      tableName: "services",
+      freezeTableName: true,
+    }
+  );
+};

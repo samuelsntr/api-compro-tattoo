@@ -1,17 +1,23 @@
 module.exports = (sequelize, DataTypes) => {
-    return sequelize.define('PageContent', {
+  return sequelize.define(
+    "PageContent",
+    {
       page: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
       },
       section: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
       },
       content: {
         type: DataTypes.TEXT,
-        allowNull: false
-      }
-    });
-  };
-  
+        allowNull: false,
+      },
+    },
+    {
+      tableName: "pagecontents",
+      freezeTableName: true,
+    }
+  );
+};

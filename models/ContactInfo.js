@@ -1,24 +1,30 @@
 module.exports = (sequelize, DataTypes) => {
-    return sequelize.define('ContactInfo', {
+  return sequelize.define(
+    "ContactInfo",
+    {
       address: {
         type: DataTypes.STRING,
-        allowNull: true
+        allowNull: true,
       },
       phone: {
         type: DataTypes.STRING,
-        allowNull: true
+        allowNull: true,
       },
       email: {
         type: DataTypes.STRING,
-        allowNull: true
+        allowNull: true,
       },
       mapEmbedUrl: {
         type: DataTypes.TEXT,
-        allowNull: true
+        allowNull: true,
       },
       instagram: DataTypes.STRING,
       facebook: DataTypes.STRING,
       tiktok: DataTypes.STRING,
-    });
-  };
-  
+    },
+    {
+      tableName: "contactinfos",
+      freezeTableName: true,
+    }
+  );
+};

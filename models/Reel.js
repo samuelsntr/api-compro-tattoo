@@ -1,5 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
-    return sequelize.define('Reel', {
+  return sequelize.define(
+    "Reel",
+    {
       url: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -8,5 +10,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: true,
       },
-    });
-  };
+    },
+    {
+      tableName: "reels",
+      freezeTableName: true,
+    }
+  );
+};
